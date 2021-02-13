@@ -6,18 +6,52 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Car Parking</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <script type="text/javascript">
-        /* =============================
-        This script generates sample text for the body content. 
-        You can remove this script and any reference to it. 
-         ============================= */
-        var bodyText = ["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h3>Heading</h3><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
-        function generateText(sentenceCount) {
-            for (var i = 0; i < sentenceCount; i++)
-                document.write(bodyText[Math.floor(Math.random() * 7)] + " ")
-        }
+        
+        function myFunction(n) {
+  var minutes = 1000 * 60;
+  var hours = minutes * 60;
+  var d = new Date();
+  var t= d.getTime();
+
+  var hour = Math.round((t-n) / hours);
+  var min = Math.round((t-n) / minutes);
+  return hour+":"+min;
+}
+
+function coin(){
+  time = myFunction(1613200539000) //เวลาที่จอดรถ
+  time = time.split(":")
+  coin = 20 * ((time[0]*60)+time[1])
+  return coin //return ออกมาเป็นเงินตามเวลาที่จอดรถไป
+}
+
+
+var active = true;
+var coin = [{y: 22},{y: 23},{y: 24},{y: 25}] //ทุกครั้งที่รถเข้ามาต้องยัดเขามาในนี้
+
+
+window.onload = function () {
+
+  var chart = new CanvasJS.Chart("Car parking", {
+    animationEnabled: true,
+    theme: "dark2",
+    title:{
+      text: "Parking 1"
+    },
+    data: [{        
+      type: "line",
+          indexLabelFontSize: 16,
+      dataPoints:
+        coin
+    }]
+  });
+  chart.render();
+
+}
     </script>
+
 </head>
 
 <body>
@@ -30,19 +64,9 @@
 
         <main id="center" class="column">
             <article>
-                <p>ใส่กราฟ</p>
-
-                <!-- <h1 style="background-color:rgb(255, 206, 46)">Car parking website for Exceed camp 17th group project
-                </h1>
-                <div class="box1 red"></div>
-                <div class="box2 red"></div>
-                <div class="box4 green"> </div>
-                <div class="box3 green"> </div>
-                <div class="color-box1">lot1</div>
-                <div class="color-box2">lot2</div>
-                <div class="color-box3">lot3</div>
-                <div class="color-box4">lot4</div> -->
-
+                <p>Lot1</p>
+                <div id="Car parking" style="height: 300px; width: 100%;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
             </article>
         </main>

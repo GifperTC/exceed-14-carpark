@@ -1,9 +1,19 @@
+/* HEADER */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
+
 #header {
     /* font-size: large; */
     padding: 0.3em;
     padding-left: 15px;
     background-image: url("image/car.jpg");
     /* background: #bf98ce; */
+}
+
+p {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-family: 'Lexend Mega', sans-serif;
 }
 
 .button {
@@ -122,6 +132,15 @@ body {
     line-height: 1.5em;
 }
 
+.card {
+    background-color: white;
+    border: 1px solid lightsalmon;
+    border-top: 10px solid lightsalmon;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px 20px;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -158,12 +177,6 @@ footer {
     padding-top: 1em;
 }
 
-p {
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    font-family: 'Courier New';
-}
 
 h3 {
     font-weight: bold;
@@ -184,28 +197,28 @@ h6 {
     width: 100px;
     height: 200px;
     position: absolute;
-    left: 200px;
+    right: 800px;
     top: 150px;
 }
 .box2 {
     width: 100px;
     height: 200px;
     position: absolute;
-    left:600px;
+    right:600px;
     top: 150px;
 }
 .box3 {
     width: 100px;
     height: 200px;
     position: absolute;
-    right: 200px;
+    right: 400px;
     top: 150px;
 }
 .box4 {
     width: 100px;
     height: 200px;
     position: absolute;
-    right:600px;
+    right:200px;
     top: 150px;
 }
 
