@@ -1,3 +1,5 @@
+
+
 let cache = [];
 
 function makeNewNode(text) {
@@ -8,41 +10,38 @@ function makeNewNode(text) {
 
 app = document.getElementById("center");
 
-function is_empty() {
+function isEmpty() {
     setInterval(() => {
     fetch('https://exceed14.cpsk-club.xyz/parking')
     .then((data) => data.json())
     .then((datas) => {
-        
-        datas.forEach(data => console.log(data.is_empty))
-
-        // datas.forEach(data => {
-        //     if(data.parking_number == 1) {
-        //         if(data.is_empty != true) {
-        //         document.getElementsById("box1").style.backgroundColor = "red";
-        //         }
-        //     }
-        //     if(data.parking_number == 2) {
-        //         if(data.is_empty != true) {
-        //         document.getElementsById("box2").style.background = "red";
-        //         }
-        //     }
-        //     if(data.parking_number == 3) {
-        //         if(data.is_empty != true) {
-        //         document.getElementsById("box3").style.background = "red";
-        //         }
-        //     }
-        //     if(data.parking_number == 4) {
-        //         if(data.is_empty != true) {
-        //         document.getElementsById("box4").style.background = "red";
-        //         }
-        //     }
-        // });
+        datas.forEach(data => {
+            if(data.parking_number == 1) {
+                if(data.is_empty != true) {
+                document.getElementsById("box1").style.backgroundColor = "red";
+                }
+            }
+            if(data.parking_number == 2) {
+                if(data.is_empty != true) {
+                document.getElementsById("box2").style.background = "red";
+                }
+            }
+            if(data.parking_number == 3) {
+                if(data.is_empty != true) {
+                document.getElementsById("box3").style.background = "red";
+                }
+            }
+            if(data.parking_number == 4) {
+                if(data.is_empty != true) {
+                document.getElementsById("box4").style.background = "red";
+                }
+            }
+        });
     });
     }, 5000);
 }
 
-window.setInterval(is_empty(), 2000);
+window.setInterval(isEmpty(), 2000);
 
 
 

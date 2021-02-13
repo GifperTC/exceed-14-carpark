@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Template by quackit.com -->
 <html>
 
 <head>
@@ -21,15 +20,15 @@
 }
 
 function coin(){
-  time = myFunction(1613200539000) //เวลาที่จอดรถ
+  time = myFunction(1613200539000)
   time = time.split(":")
   coin = 20 * ((time[0]*60)+time[1])
-  return coin //return ออกมาเป็นเงินตามเวลาที่จอดรถไป
+  return coin
 }
 
 
 var active = true;
-var coin = [{y: 22},{y: 23},{y: 24},{y: 25}] //ทุกครั้งที่รถเข้ามาต้องยัดเขามาในนี้
+var coin = [{y: 22},{y: 23},{y: 24},{y: 25}]
 
 
 window.onload = function () {
@@ -86,7 +85,6 @@ window.onload = function () {
             <button class="button button1" onclick="myFunction3()">Car3</button>
             <button class="button button2" onclick="myFunction4()">Car4</button>
 
-            <h4 style="color:red"> นาทีละ 20 XCoin *เศษของนาทีคิดเป็น 1 นาทีเต็ม</h4>
             <h6 id="demo"></h6>
             <script>
                 function myFunction1() {
