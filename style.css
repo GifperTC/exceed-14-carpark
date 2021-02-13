@@ -194,6 +194,8 @@ h6 {
 }
 
 .box1 {
+    text-align: center;
+    background-color: #0f0;
     width: 100px;
     height: 200px;
     position: absolute;
@@ -201,6 +203,7 @@ h6 {
     top: 150px;
 }
 .box2 {
+    background: #0f0;
     width: 100px;
     height: 200px;
     position: absolute;
@@ -208,6 +211,7 @@ h6 {
     top: 150px;
 }
 .box3 {
+    background: #0f0;
     width: 100px;
     height: 200px;
     position: absolute;
@@ -215,6 +219,7 @@ h6 {
     top: 150px;
 }
 .box4 {
+    background: #0f0;
     width: 100px;
     height: 200px;
     position: absolute;
@@ -222,13 +227,6 @@ h6 {
     top: 150px;
 }
 
-.red {
-    background: #f00;
-}
-
-.green {
-    background: #0f0;
-}
 .color-box1{
     position: absolute;
     right:830px;
