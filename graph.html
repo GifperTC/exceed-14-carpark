@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Car Parking</title>
+    <style type="text/css">
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+
+        .button1:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button2 {
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+        }
+
+        .button2:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+
+
+
+        /* Layout */
+        body {
+            min-width: 630px;
+        }
+
+        #container {
+            padding-left: 200px;
+            padding-right: 190px;
+        }
+
+        #container .column {
+            position: relative;
+            float: left;
+        }
+
+        #center {
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        #left {
+            width: 180px;
+            padding: 0 10px;
+            right: 240px;
+            margin-left: -100%;
+        }
+
+        #right {
+            width: 130px;
+            padding: 0 10px;
+            margin-right: -100%;
+        }
+
+        #footer {
+            clear: both;
+        }
+
+        /* IE hack */
+        * html #left {
+            left: 150px;
+        }
+
+        /* Make the columns the same height as each other */
+        #container {
+            overflow: hidden;
+        }
+
+        #container .column {
+            padding-bottom: 1001em;
+            margin-bottom: -1000em;
+        }
+
+        /* Fix for the footer */
+        * html body {
+            overflow: hidden;
+        }
+
+        * html #footer-wrapper {
+            float: left;
+            position: relative;
+            width: 100%;
+            padding-bottom: 10010px;
+            margin-bottom: -10000px;
+            background: #fff;
+        }
+
+        /* Aesthetics */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Sans-serif;
+            line-height: 1.5em;
+        }
+
+        p {
+            color: #555;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: darkgreen;
+            text-decoration: none;
+        }
+
+        #header {
+            font-size: large;
+            padding: 0.3em;
+            background-image: url("image/car.jpg");
+            /* background: #bf98ce; */
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: DarkSalmon;
+            color: white;
+        }
+
+        #left {
+            background: #DAE9BC;
+        }
+
+        #right {
+            background: #F7FDEB;
+            /* background-image: url("image/CarParking.jpg"); */
+        }
+
+        #center {
+            background: rgb(182, 136, 136);
+        }
+
+        #container .column {
+            padding-top: 1em;
+        }
+
+        p {
+            font-weight: bold;
+            color: rgb(236, 177, 15);
+            font-size: 50px;
+            font-family: 'Courier New';
+        }
+
+        h3 {
+            font-weight: bold;
+            background-color: rgb(200, 155, 241);
+            color: rgb(23, 22, 105);
+            font-size: 25px;
+            font-family: 'Courier New';
+        }
+
+        h6 {
+            font-weight: bold;
+            color: rgb(5, 46, 73);
+            font-size: 20px;
+            font-family: 'Courier New';
+        }
+
+        .box1 {
+            width: 100px;
+            height: 200px;
+            position: absolute;
+            left: 200px;
+            top: 150px;
+        }
+        .box2 {
+            width: 100px;
+            height: 200px;
+            position: absolute;
+            left:600px;
+            top: 150px;
+        }
+        .box3 {
+            width: 100px;
+            height: 200px;
+            position: absolute;
+            right: 200px;
+            top: 150px;
+        }
+        .box4 {
+            width: 100px;
+            height: 200px;
+            position: absolute;
+            right:600px;
+            top: 150px;
+        }
+        
+
+        .red {
+            background: #f00;
+        }
+
+        .green {
+            background: #0f0;
+        }
+        .color-box1{
+            position: absolute;
+            right:830px;
+            top: 370px;
+
+        }
+        .color-box2{
+            position: absolute;
+            right:640px;
+            top: 370px;
+        }
+        .color-box3{
+            position: absolute;
+            right:430px;
+            top: 370px;
+
+        }
+        .color-box4{
+            position: absolute;
+            right:240px;
+            top: 370px;
+
+        }
+    </style>
+
+    <script type="text/javascript">
+        /* =============================
+        This script generates sample text for the body content. 
+        You can remove this script and any reference to it. 
+         ============================= */
+        var bodyText = ["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h3>Heading</h3><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
+        function generateText(sentenceCount) {
+            for (var i = 0; i < sentenceCount; i++)
+                document.write(bodyText[Math.floor(Math.random() * 7)] + " ")
+        }
+    </script>
+</head>
+
+<body>
+
+    <header id="header">
+        <p>Car Park G.14</p>
+    </header>
+
+    <div id="container">
+
+        <main id="center" class="column">
+            <article>
+                <p>ใส่กราฟ</p>
+
+                <!-- <h1 style="background-color:rgb(255, 206, 46)">Car parking website for Exceed camp 17th group project
+                </h1>
+                <div class="box1 red"></div>
+                <div class="box2 red"></div>
+                <div class="box4 green"> </div>
+                <div class="box3 green"> </div>
+                <div class="color-box1">lot1</div>
+                <div class="color-box2">lot2</div>
+                <div class="color-box3">lot3</div>
+                <div class="color-box4">lot4</div> -->
+
+
+            </article>
+        </main>
+
+        <nav id="left" class="column">
+            <h3>Status Car</h3>
+            <ul>
+                <li><a href="car.html">First Page</a></li>
+            </ul>
+
+        </nav>
+
+        <div id="right" class="column">
+            <h3>Calculate cost for each lot</h3>
+            <button class="button button1" onclick="myFunction1()">Car1</button>
+            <button class="button button2" onclick="myFunction2()">Car2</button>
+            <button class="button button1" onclick="myFunction3()">Car3</button>
+            <button class="button button2" onclick="myFunction4()">Car4</button>
+
+            <h4 style="color:red"> นาทีละ 20 XCoin *เศษของนาทีคิดเป็น 1 นาทีเต็ม</h4>
+            <h6 id="demo"></h6>
+            <script>
+                function myFunction1() {
+                    document.getElementById("demo").innerHTML = "Total cost car1: Baht";
+                }
+                function myFunction2() {
+                    document.getElementById("demo").innerHTML = "Total cost car2: Baht";
+                }
+                function myFunction3() {
+                    document.getElementById("demo").innerHTML = "Total cost car3: Baht";
+                }
+                function myFunction4() {
+                    document.getElementById("demo").innerHTML = "Total cost car4: Baht";
+                }
+            </script>
+
+
+        </div>
+
+    </div>
+
+    <div id="footer-wrapper">
+        <footer id="footer">
+            <img src="image/logo1.jpg" height="100" width="100">
+        </footer>
+    </div>
+
+</body>
+
+</html>
